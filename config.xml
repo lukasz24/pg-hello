@@ -4,8 +4,8 @@
 		id          = "myfirstapp"
         version     = "1.0.0" >
 
-    <name>First app</name>
-    <description>Businesscard</description>
+    <name>Network Connection</name>
+    <description>Network Connection</description>
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
 		John Brown
 	</author>
