@@ -20,3 +20,10 @@ function deviceInfo() {
 	navigator.notification.alert(info);
 	
 }
+
+function authorInfo() {
+	aInfo = "Name: Łukasz Pudzisz" + "\n" + 
+			"Age: 22";
+
+	navigator.notification.alert(aInfo);
+}
