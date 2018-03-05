@@ -1,0 +1,19 @@
+body {
+	background-color: #777777;
+}
+#personalInfoList {
+	background-color: #BBBBBB;
+	list-style: none;
+	max-width: 200px;
+	padding: 20px;
+
+}
+
+#personalInfoList > li{
+	border-top: 1px solid black;
+
+}
+#personalInfoList :first-child{
+	border-top: none;
+	
+}
