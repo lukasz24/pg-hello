@@ -29,9 +29,15 @@ function authorInfo() {
 }
 
 function checkConnection(){
-	document.getElementById("personalInfoList").firstChild.innerHTML = "Adam Nowicki";
-	 //var networkState = navigator.connection.type;
- 	var netStat = navigator.network.connection.type;
+	var rd = document.getElementById("personalInfoList");
+	var dz = rd.firstChild;
+	var networkState = navigator.connection.type;
+	
+ 	//alert(dz.innerHTML);
+ 	dz.innerHTML = "Adam Nowicki";
+ 	var infoPanel = document.createElement('div');
+    infoPanel.innerHTML = "" + networkState;
+ 	document.body.appendChild(infoPanel);
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
@@ -41,7 +47,9 @@ function checkConnection(){
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
- 
+    var infoPanel = document.createElement('div');
+    infoPanel.innerHTML = "" + states[networkState];
+ 	document.body.appendChild(infoPanel);
     //alert('Connection type: ' + states[networkState]);
-    navigator.notification.alert('Connection type: ' + "states[networkState]" + "\n" + 'Con type: ' + netStat);
+    navigator.notification.alert('Connection type: ' + "states[networkState]");
 }
