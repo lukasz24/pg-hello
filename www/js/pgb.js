@@ -29,7 +29,7 @@ function authorInfo() {
 }
 
 function checkConnection(){
-	 var networkState = navigator.connection.type;
+	 //var networkState = navigator.connection.type;
  	var netStat = navigator.network.connection.type;
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -42,5 +42,5 @@ function checkConnection(){
     states[Connection.NONE]     = 'No network connection';
  
     //alert('Connection type: ' + states[networkState]);
-    navigator.notification.alert('Connection type: ' + states[networkState] + "\n" + 'Con type: ' + netStat);
+    navigator.notification.alert('Connection type: ' + "states[networkState]" + "\n" + 'Con type: ' + netStat);
 }
