@@ -29,6 +29,7 @@ function authorInfo() {
 }
 
 function checkConnection(){
+	document.getElementById("personalInfoList").firstChild.innerHTML = "Adam Nowicki";
 	 //var networkState = navigator.connection.type;
  	var netStat = navigator.network.connection.type;
     var states = {};
