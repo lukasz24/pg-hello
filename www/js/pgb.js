@@ -27,17 +27,19 @@ var options = { frequency: 3000 };  // Update every 3 seconds
 var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 */
 }
-
+var ine = document.getElementById("info");
 function createContact() {
    var myContact = navigator.contacts.create({"displayName": "Test User"});
    myContact.save(contactSuccess, contactError);
     
    function contactSuccess() {
       alert("Contact is saved!");
+      info.innerHTML = "Contact is saved!";
    }
 	
    function contactError(message) {
       alert('Failed because: ' + message);
+      info.innerHTML = 'Failed because: ' + message;
    }
 	
 }
