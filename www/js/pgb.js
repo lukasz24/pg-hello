@@ -34,12 +34,12 @@ function createContact() {
     
    function contactSuccess() {
       alert("Contact is saved!");
-      info.innerHTML = "Contact is saved!";
+      ine.innerHTML = "Contact is saved!";
    }
 	
    function contactError(message) {
       alert('Failed because: ' + message);
-      info.innerHTML = 'Failed because: ' + message;
+      ine.innerHTML = 'Failed because: ' + message;
    }
 	
 }
