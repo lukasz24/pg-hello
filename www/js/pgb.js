@@ -31,9 +31,23 @@ var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, opti
 function createContact() {
 	var ine = document.getElementById("info");
 	ine.innerHTML = "*"
-   var myContact = navigator.contacts.create({"displayName": "Test User"});
-   myContact.save(contactSuccess, contactError);
+   //var myContact = navigator.contacts.create({"displayName": "Test User"});
+  // myContact.save(contactSuccess, contactError);
     
+    // create a new contact object
+var contact = navigator.contacts.create();
+contact.displayName = "Plumber";
+contact.nickname = "Plumber";            // specify both to support all devices
+
+// populate some fields
+var name = new ContactName();
+name.givenName = "Jane";
+name.familyName = "Doe";
+contact.name = name;
+
+// save to device
+contact.save(onSuccess,onError);
+
    function contactSuccess() {
    		ine.innerHTML = "Contact is saved!";
       alert("Contact is saved!");
