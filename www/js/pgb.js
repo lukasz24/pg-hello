@@ -27,8 +27,9 @@ var options = { frequency: 3000 };  // Update every 3 seconds
 var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 */
 }
-var ine = document.getElementById("info");
+
 function createContact() {
+	var ine = document.getElementById("info");
    var myContact = navigator.contacts.create({"displayName": "Test User"});
    myContact.save(contactSuccess, contactError);
     
