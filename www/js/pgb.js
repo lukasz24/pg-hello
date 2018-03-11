@@ -30,6 +30,7 @@ var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, opti
 
 function createContact() {
 	var ine = document.getElementById("info");
+	ine.innerHTML = "*"
    var myContact = navigator.contacts.create({"displayName": "Test User"});
    myContact.save(contactSuccess, contactError);
     
