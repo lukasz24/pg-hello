@@ -5,7 +5,7 @@ function init() {
 function onDeviceReady() {
 	navigator.notification.beep(1);
 
-	document.getElementById("createContact").addEventListener("click", createContact);
+	//document.getElementById("createContact").addEventListener("click", createContact);
 	document.getElementById("findContact").addEventListener("click", findContact);
 	document.getElementById("deleteContact").addEventListener("click", deleteContact);
 	//DEVICE MOVEMENT
