@@ -35,13 +35,15 @@ function createContact() {
    myContact.save(contactSuccess, contactError);
     
    function contactSuccess() {
+   		ine.innerHTML = "Contact is saved!";
       alert("Contact is saved!");
-      ine.innerHTML = "Contact is saved!";
+      
    }
 	
    function contactError(message) {
+   	ine.innerHTML = 'Failed because: ' + message;
       alert('Failed because: ' + message);
-      ine.innerHTML = 'Failed because: ' + message;
+      
    }
 	
 }
