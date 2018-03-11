@@ -3,9 +3,11 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id          = "myfirstapp"
         version     = "1.0.0" >
-
-    <name>Improve business card</name>
-    <description>Improve business card</description>
+    <config-file target="AndroidManifest.xml" parent="/*">
+    	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	</config-file>
+    <name>Contacts</name>
+    <description>Contacts</description>
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
 		John Brown
 	</author>
@@ -24,6 +26,7 @@
 	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
 	
 	
 </widget>
