@@ -32,11 +32,11 @@ function checkConnection(){
 	var rd = document.getElementById("personalInfoList");
 	var dz = rd.firstChild;
 	var networkState = navigator.connection.type;
-	
+	var nt = Connection.Type;
  	//alert(dz.innerHTML);
  	dz.innerHTML = "Adam Nowicki";
  	var infoPanel = document.createElement('div');
-    infoPanel.innerHTML = "" + networkState;
+    infoPanel.innerHTML = "" + networkState + " " + nt;
  	document.body.appendChild(infoPanel);
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
