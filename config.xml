@@ -3,9 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id          = "myfirstapp"
         version     = "1.0.0" >
-    <config-file target="AndroidManifest.xml" parent="/*">
-    	<uses-permission android:name="android.permission.READ_CONTACTS" />
-	</config-file>
+    
     <name>Contacts</name>
     <description>Contacts</description>
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
