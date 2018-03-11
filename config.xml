@@ -10,8 +10,10 @@
 		John Brown
 	</author>
 	<platform name="android" />
-	<splash src="res/screen/android/splash.png" width="768" height="1024"/>
-	
+	<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
+		
+	<splash src="splash.png" />
+	<preference name="SplashScreenDelay" value="3000" />
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
 	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
