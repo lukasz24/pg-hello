@@ -42,8 +42,8 @@ function checkConnection(){
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
-    var infoPanel = document.createElement('div');
     
-    rd.innerHTML = "Status połączenia z Internetem: " + states[networkState];
+    
+    rd.innerHTML = 'Status połączenia z Internetem: ' + states[networkState];
     navigator.notification.alert('Connection type: ' + states[networkState]);
 }
