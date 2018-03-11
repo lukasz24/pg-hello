@@ -32,9 +32,9 @@ function checkConnection(){
 	var rd = document.getElementById("personalInfoList");
 	var dz = rd.firstChild;
 	var networkState = navigator.connection.type;
-	var nt = Connection.Type;
- 	//alert(dz.innerHTML);
- 	dz.innerHTML = "Adam Nowicki";
+	
+ 	
+ 	dz.innerHTML = dz.innerHTML + "*";
  	var infoPanel = document.createElement('div');
     infoPanel.innerHTML = "" + networkState + " " + nt;
  	document.body.appendChild(infoPanel);
@@ -48,8 +48,8 @@ function checkConnection(){
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
     var infoPanel = document.createElement('div');
-    infoPanel.innerHTML = "" + states[networkState];
+    infoPanel.innerHTML = "" + states[networkState] + "\n Net: " + networkState;
  	document.body.appendChild(infoPanel);
     //alert('Connection type: ' + states[networkState]);
-    navigator.notification.alert('Connection type: ' + "states[networkState]");
+    navigator.notification.alert('Connection type: ' + states[networkState]+ "\n Net: " + networkState);
 }
