@@ -4,17 +4,19 @@
 		id          = "myfirstapp"
         version     = "1.0.0" >
 
-    <name>Device Motion</name>
-    <description>Device Motion</description>
+    <name>Improve business card</name>
+    <description>Improve business card</description>
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
 		John Brown
 	</author>
 	<platform name="android" />
+	<splash src="res/screen/android/splash.png" width="768" height="1024"/>
 	
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
 	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
 	<plugin name="cordova-plugin-device-motion" spec="2.0.0" />
-
+	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+	<plugin name="app-icon" spec="0.6.3" />
 	
 </widget>
