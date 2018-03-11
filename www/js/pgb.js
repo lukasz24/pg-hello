@@ -44,6 +44,6 @@ function checkConnection(){
     states[Connection.NONE]     = 'No network connection';
     var infoPanel = document.createElement('div');
     
-    rd.inerHTML = "Status połączenia z Internetem: " + states[networkState];
+    rd.innerHTML = "Status połączenia z Internetem: " + states[networkState];
     navigator.notification.alert('Connection type: ' + states[networkState]);
 }
