@@ -8,6 +8,7 @@ function onDeviceReady() {
 	//document.getElementById("createContact").addEventListener("click", createContact);
 	document.getElementById("findContact").addEventListener("click", findContact);
 	document.getElementById("deleteContact").addEventListener("click", deleteContact);
+	console.log(navigator.contacts);
 	//DEVICE MOVEMENT
 /*
 	function onSuccess(acceleration) {
