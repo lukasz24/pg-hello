@@ -14,7 +14,7 @@ function onDeviceReady() {
       event.preventDefault();
 	}, true);
 		
-	window.removeEventListener("devicemotion", processEvent);
+	window.removeEventListener("devicemotion", devMove);
 
 }
 
