@@ -21,7 +21,7 @@
             <uses-permission android:name="android.permission.READ_CONTACTS" />
         </config-file>
 
-        <source-file src="src/android/ContactsManager.java" target-dir="src/com/dbaq/cordova/contactsPhoneNumbers" />
+       
     </platform>
 	
        
@@ -39,7 +39,7 @@
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
-	<plugin name="cordova-android" spec="6.3.0" />
+	
 	
 	
 </widget>
