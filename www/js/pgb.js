@@ -9,8 +9,12 @@ function onDeviceReady() {
 	document.addEventListener("offline", checkConnection, false);
 	document.addEventListener("online", checkConnection, false);
 
-	document.addEventListener("devicemotion", devMove, true);
-	
+	window.addEventListener("compassneedscalibration",function(event) {
+      // ask user to wave device in a figure-eight motion .   
+      event.preventDefault();
+	}, true);
+		
+	window.removeEventListener("devicemotion", processEvent);
 
 }
 
@@ -64,7 +68,11 @@ function checkConnection(){
     //navigator.notification.alert('Connection type: ' + states[networkState]);
 }
 
-function devMove(){
+function detectMotion() {
+    window.addEventListener("devicemotion", devMove, true);
+}
+
+function devMove(event){
 	//DEVICE MOVEMENT
 	
 	function onSuccess(acceleration) {
@@ -72,9 +80,9 @@ function devMove(){
 		var yPos = document.getElementById('yPos');
 		var zPos = document.getElementById('zPos');
 
-		xPos.innerHTML = "X = " + acceleration.x;
-		yPos.innerHTML = "Y = " + acceleration.y;
-		zPos.innerHTML = "Z = " + acceleration.z;
+		xPos.innerHTML = "X = " + Math.round(event.x*100)/100;
+		yPos.innerHTML = "Y = " + Math.round(event.y*100)/100;
+		zPos.innerHTML = "Z = " + Math.round(event.z*100)/100;
 
 		/*
     alert('Acceleration X: ' + acceleration.x + '\n' +
