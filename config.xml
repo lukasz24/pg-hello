@@ -30,7 +30,7 @@
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
-
+	<plugin name="cordova-android" spec="6.3.0" />
 	
 	<platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
