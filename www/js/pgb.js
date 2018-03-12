@@ -9,24 +9,11 @@ function onDeviceReady() {
 	document.addEventListener("offline", checkConnection, false);
 	document.addEventListener("online", checkConnection, false);
 
-	function onSuccess(acceleration) {
-+    alert('Acceleration X: ' + acceleration.x + '\n' +
-+          'Acceleration Y: ' + acceleration.y + '\n' +
-+          'Acceleration Z: ' + acceleration.z + '\n' +
-+          'Timestamp: '      + acceleration.timestamp + '\n');
-+    navigator.notification.alert('TEST Acceleration X: ' + acceleration.x + '\n' +
-+          'Acceleration Y: ' + acceleration.y + '\n' +
-+          'Acceleration Z: ' + acceleration.z + '\n' +
-+          'Timestamp: '      + acceleration.timestamp + '\n');
-+}
-+
-+function onError() {
-+    alert('onError!');
-+}
-+
-+var options = { frequency: 3000 };  // Update every 3 seconds
-+
-+var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+	window.addEventListener("compassneedscalibration", function(event) {
+        event.preventDefault();
+    }, true);
+    detectMotion();
+    window.removeEventListener("devicemotion", processEvent);
 
 }
 
@@ -96,9 +83,9 @@ function devMove(event){
 		var yPos = document.getElementById('yPos');
 		var zPos = document.getElementById('zPos');
 
-		xPos.innerHTML = "X = " + Math.round(event.acceleration.x*100)/100;
-		yPos.innerHTML = "Y = " + Math.round(event.acceleration.y*100)/100;
-		zPos.innerHTML = "Z = " + Math.round(event.acceleration.z*100)/100;
+		xPos.innerHTML = "X = " + event.acceleration.x;
+		yPos.innerHTML = "Y = " + event.acceleration.y;
+		zPos.innerHTML = "Z = " + event.acceleration.z;
 		/*
 	function onSuccess(acceleration) {
 		var xPos = document.getElementById('xPos');
