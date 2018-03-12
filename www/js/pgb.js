@@ -9,12 +9,11 @@ function onDeviceReady() {
 	document.addEventListener("offline", checkConnection, false);
 	document.addEventListener("online", checkConnection, false);
 
-	window.addEventListener("compassneedscalibration",function(event) {
-      // ask user to wave device in a figure-eight motion .   
-      event.preventDefault();
-	}, true);
-		
-	window.removeEventListener("devicemotion", devMove);
+	window.addEventListener("compassneedscalibration", function(event) {
+        event.preventDefault();
+    }, true);
+    detectMotion();
+    window.removeEventListener("devicemotion", processEvent);
 
 }
 
@@ -69,7 +68,13 @@ function checkConnection(){
 }
 
 function detectMotion() {
-    window.addEventListener("devicemotion", devMove, true);
+    window.addEventListener("devicemotion", processEvent, true);
+}
+
+function processEvent(event) {
+    document.getElementById('xPos').innerHTML = 'Acceleration X: ' + event.acceleration.x;
+    document.getElementById('yPos').innerHTML = 'Acceleration Y: ' + event.acceleration.y;
+    document.getElementById('zPos').innerHTML = 'Acceleration Z: ' + event.acceleration.z;
 }
 
 function devMove(event){
