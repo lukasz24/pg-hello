@@ -1,9 +1,13 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
+	document.addEventListener("deviceready",onDeviceReady, false);
 }
 
 function onDeviceReady() {
 	navigator.notification.beep(1);
+
+	document.addEventListener("offline", checkConnection, false);
+	document.addEventListener("online", checkConnection, false);
 
 	//DEVICE MOVEMENT
 
