@@ -16,9 +16,23 @@
 
 	<platform name="android" />
 	<platform name="android">
-              
-              <icon src="img/icon.png" density="xhdpi" />
-     </platform>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Contacts">
+                <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        </config-file>
+
+        <source-file src="src/android/ContactAccessor.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactAccessorSdk5.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactManager.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactInfoDTO.java" target-dir="src/org/apache/cordova/contacts" />
+    </platform>
 	<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
 	<splash platform="android" qualifier="land-xhdpi" src="img/splash-land.png" />
 		
