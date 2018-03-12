@@ -10,7 +10,7 @@
 		John Brown
 	</author>
 
-	<platform name="android" />
+	
 	<platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Contacts">
@@ -29,18 +29,19 @@
         <source-file src="src/android/ContactManager.java" target-dir="src/org/apache/cordova/contacts" />
         <source-file src="src/android/ContactInfoDTO.java" target-dir="src/org/apache/cordova/contacts" />
     </platform>
+
 	<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
 	<splash platform="android" qualifier="land-xhdpi" src="img/splash-land.png" />
 		
 	<splash src="splash.png" />
-	<preference name="SplashScreenDelay" value="3000" />
+	<preference name="SplashScreenDelay" value="2000" />
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
 	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
-	<plugin name="cordova-plugin-file@5.0.0" spec="6.0.1" />
+
 	
 	
 </widget>
