@@ -66,7 +66,7 @@ function checkConnection(){
 
 function devMove(){
 	//DEVICE MOVEMENT
-	navigator.accelerometer.watchAcceleration(onSuccess, onError);
+	
 	function onSuccess(acceleration) {
 		var xPos = document.getElementById('xPos');
 		var yPos = document.getElementById('yPos');
@@ -87,7 +87,7 @@ function devMove(){
 	function onError() {
     	alert('onError!');
 	}
-
+	navigator.accelerometer.watchAcceleration(onSuccess, onError);
 	//var options = { frequency: 2000 };  // Update every 2 seconds
 
 	//var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
