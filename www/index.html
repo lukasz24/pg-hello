@@ -8,14 +8,27 @@
 
 	</head>
 	<body onload="init()">
-		<h1>Contacts</h1>
-		<p id="bc"></p>
+		<p id="devPosition">
+			<h1>Business Card</h1>
+			<ul>
+				<li>Name: Łukasz Pudzisz</li>
+				<li>E-mail: <a href="mailto:lukasz.pudzisz@gmail.com">lukasz.pudzisz@gmail.com</a></li>
+				<li>IT student</li>
+				<li>Group: KrDUIs1011</li>
+			</ul>
+		</p>
+		<p id="devPosition">
+			<h2>Device movement</h2>
+			<div id="xPos"></div>
+			<div id="yPos"></div>
+			<div id="zPos"></div>
+		</p>
+		<p id="netConn">
+			<h2>Network Connection</h2>
+			<div>No Internet connection!</div>
+			<div style="display: none">Internet connection by:</div>
+		</p>
 		
-		<div id="contactsFunctions">
-			<button id = "createContact" onclick="createContact()">ADD NEW CONTACT</button>
-			<button id = "findContact">FIND CONTACT</button>
-			<button id = "deleteContact">DELETE CONTACT</button>
-		</div>
-		<div id="info"> </div>
+		
 	</body>
 </html>

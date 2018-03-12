@@ -5,108 +5,33 @@ function init() {
 function onDeviceReady() {
 	navigator.notification.beep(1);
 
-	//document.getElementById("createContact").addEventListener("click", createContact);
-	document.getElementById("findContact").addEventListener("click", findContact);
-	document.getElementById("deleteContact").addEventListener("click", deleteContact);
-	console.log(navigator.contacts);
 	//DEVICE MOVEMENT
-/*
+
 	function onSuccess(acceleration) {
+		var xPos = document.getElementById('xPos').innerHTML = "X = " + acceleration.x;
+		var yPos = document.getElementById('yPos').innerHTML = "Y = " + acceleration.y;
+		var zPos = document.getElementById('zPos').innerHTML = "Z = " + acceleration.z;
+
+
+
+		/*
     alert('Acceleration X: ' + acceleration.x + '\n' +
           'Acceleration Y: ' + acceleration.y + '\n' +
           'Acceleration Z: ' + acceleration.z + '\n' +
           'Timestamp: '      + acceleration.timestamp + '\n');
-
+	*/
 }
 
 function onError() {
     alert('onError!');
 }
 
-var options = { frequency: 3000 };  // Update every 3 seconds
+var options = { frequency: 1000 };  // Update every 3 seconds
 
 var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-*/
+
 }
 
-function createContact() {
-	var ine = document.getElementById("info");
-	ine.innerHTML = "*"
-   //var myContact = navigator.contacts.create({"displayName": "Test User"});
-  // myContact.save(contactSuccess, contactError);
-    
-    // create a new contact object
-var contact = navigator.contacts.create();
-contact.displayName = "Plumber";
-contact.nickname = "Plumber";            // specify both to support all devices
-ine.innerHTML = "C name: " + contact.displayName;
-// populate some fields
-var name = new ContactName();
-name.givenName = "Jane";
-name.familyName = "Doe";
-contact.name = name;
-
-// save to device
-contact.save(onSuccess,onError);
-
-   function contactSuccess() {
-   		ine.innerHTML = "Contact is saved!";
-      alert("Contact is saved!");
-      
-   }
-	
-   function contactError(message) {
-   	ine.innerHTML = 'Failed because: ' + message;
-      alert('Failed because: ' + message);
-      
-   }
-	
-}
-
-function findContacts() {
-   var options = new ContactFindOptions();
-   options.filter = "";
-   options.multiple = true;
-   fields = ["displayName"];
-   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
-    
-   function contactfindSuccess(contacts) {
-      for (var i = 0; i < contacts.length; i++) {
-         alert("Display Name = " + contacts[i].displayName);
-      }
-   }
-	
-   function contactfindError(message) {
-      alert('Failed because: ' + message);
-   }
-	
-}
-
-function deleteContact() {
-   var options = new ContactFindOptions();
-   options.filter = "Test User";
-   options.multiple = false;
-   fields = ["displayName"];
-   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
-
-   function contactfindSuccess(contacts) {
-      var contact = contacts[0];
-      contact.remove(contactRemoveSuccess, contactRemoveError);
-
-      function contactRemoveSuccess(contact) {
-         alert("Contact Deleted");
-      }
-
-      function contactRemoveError(message) {
-         alert('Failed because: ' + message);
-      }
-   }
-
-   function contactfindError(message) {
-      alert('Failed because: ' + message);
-   }
-	
-}
 
 
 function deviceInfo() {
@@ -132,7 +57,7 @@ function authorInfo() {
 }
 
 function checkConnection(){
-	var rd = document.getElementById("infoType");
+	var rd = document.getElementById("netConn").childNode[1];
 	
 	var networkState = navigator.connection.type;
 	
@@ -148,5 +73,11 @@ function checkConnection(){
     
     
     rd.innerHTML = 'Status połączenia z Internetem: ' + states[networkState];
-    navigator.notification.alert('Connection type: ' + states[networkState]);
+    if(states[networkState] == Connection.NONE){
+    	rd.style.color = "red";
+    }else{
+    	rd.style.color = "green";
+    }
+    
+    //navigator.notification.alert('Connection type: ' + states[networkState]);
 }
