@@ -40,13 +40,7 @@
 	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-	<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    id="cordova-plugin-contacts"
-    version="3.0.2-dev">
+	<plugin name="cordova-plugin-contacts" spec="3.0.2" />
 
 	
 	
