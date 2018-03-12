@@ -15,19 +15,7 @@
     id="com.dbaq.cordova.contactsPhoneNumbers"
     version="0.0.10">
 	
-       <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="ContactsPhoneNumbers">
-                <param name="android-package" value="com.dbaq.cordova.contactsPhoneNumbers.ContactsManager"/>
-            </feature>
-        </config-file>
-
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.READ_CONTACTS" />
-        </config-file>
-
-        <source-file src="src/android/ContactsManager.java" target-dir="src/com/dbaq/cordova/contactsPhoneNumbers" />
-    </platform>
+       
 
     
 
@@ -44,5 +32,17 @@
 	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
 
 	
-	
+	<platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ContactsPhoneNumbers">
+                <param name="android-package" value="com.dbaq.cordova.contactsPhoneNumbers.ContactsManager"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+
+        <source-file src="src/android/ContactsManager.java" target-dir="src/com/dbaq/cordova/contactsPhoneNumbers" />
+    </platform>
 </widget>
