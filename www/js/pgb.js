@@ -36,7 +36,7 @@ function createContact() {
   // myContact.save(contactSuccess, contactError);
     
     // create a new contact object
-var contact = navigator.contacts.create();
+var contact = navigator.contacts.create("");
 contact.displayName = "Plumber";
 contact.nickname = "Plumber";            // specify both to support all devices
 
