@@ -74,28 +74,36 @@ function detectMotion() {
 
 function devMove(event){
 	//DEVICE MOVEMENT
-	
+	var xPos = document.getElementById('xPos');
+		var yPos = document.getElementById('yPos');
+		var zPos = document.getElementById('zPos');
+
+		xPos.innerHTML = "X = " + Math.round(event.acceleration.x*100)/100;
+		yPos.innerHTML = "Y = " + Math.round(event.acceleration.y*100)/100;
+		zPos.innerHTML = "Z = " + Math.round(event.acceleration.z*100)/100;
+		/*
 	function onSuccess(acceleration) {
 		var xPos = document.getElementById('xPos');
 		var yPos = document.getElementById('yPos');
 		var zPos = document.getElementById('zPos');
 
-		xPos.innerHTML = "X = " + Math.round(event.x*100)/100;
-		yPos.innerHTML = "Y = " + Math.round(event.y*100)/100;
-		zPos.innerHTML = "Z = " + Math.round(event.z*100)/100;
+		xPos.innerHTML = "X = " + Math.round(event.acceleration.x*100)/100;
+		yPos.innerHTML = "Y = " + Math.round(event.acceleration.y*100)/100;
+		zPos.innerHTML = "Z = " + Math.round(event.acceleration.z*100)/100;
 
 		/*
     alert('Acceleration X: ' + acceleration.x + '\n' +
           'Acceleration Y: ' + acceleration.y + '\n' +
           'Acceleration Z: ' + acceleration.z + '\n' +
           'Timestamp: '      + acceleration.timestamp + '\n');
-	*/
-	}
+	
+	
 
 	function onError() {
     	alert('onError!');
 	}
-	navigator.accelerometer.watchAcceleration(onSuccess, onError);
+	*/
+	//navigator.accelerometer.watchAcceleration(onSuccess, onError);
 	//var options = { frequency: 2000 };  // Update every 2 seconds
 
 	//var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
