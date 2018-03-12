@@ -8,11 +8,13 @@ function onDeviceReady() {
 	//DEVICE MOVEMENT
 
 	function onSuccess(acceleration) {
-		var xPos = document.getElementById('xPos').innerHTML = "X = " + acceleration.x;
-		var yPos = document.getElementById('yPos').innerHTML = "Y = " + acceleration.y;
-		var zPos = document.getElementById('zPos').innerHTML = "Z = " + acceleration.z;
+		var xPos = document.getElementById('xPos');
+		var yPos = document.getElementById('yPos');
+		var zPos = document.getElementById('zPos');
 
-
+		xPos.innerHTML = "X = " + acceleration.x;
+		yPos.innerHTML = "Y = " + acceleration.y;
+		zPos.innerHTML = "Z = " + acceleration.z;
 
 		/*
     alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -26,7 +28,7 @@ function onError() {
     alert('onError!');
 }
 
-var options = { frequency: 1000 };  // Update every 3 seconds
+var options = { frequency: 2000 };  // Update every 2 seconds
 
 var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
@@ -57,7 +59,7 @@ function authorInfo() {
 }
 
 function checkConnection(){
-	var rd = document.getElementById("netConn").childNode[1];
+	var rd = document.getElementById("netInfo");
 	
 	var networkState = navigator.connection.type;
 	
