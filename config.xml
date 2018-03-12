@@ -10,10 +10,6 @@
 		John Brown
 	</author>
 
-	<feature name="Contacts">
-    	<param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
-	</feature>
-
 	<platform name="android" />
 	<platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -44,6 +40,7 @@
 	
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 	<plugin name="cordova-plugin-contacts" spec="3.0.1" />
+	<plugin name="cordova-plugin-file@5.0.0" spec="3.0.1" />
 	
 	
 </widget>
