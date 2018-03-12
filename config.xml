@@ -9,6 +9,11 @@
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
 		John Brown
 	</author>
+
+	<feature name="Contacts">
+    	<param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+	</feature>
+
 	<platform name="android" />
 	<platform name="android">
               
