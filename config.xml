@@ -12,17 +12,7 @@
 
 	
 	<platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Contacts">
-                <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
-            </feature>
-        </config-file>
-
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.READ_CONTACTS" />
-            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        </config-file>
+       
 
         
     </platform>
