@@ -11,11 +11,22 @@
 	</author>
 
 	
-	<platform name="android">
-       
+	
+       <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ContactsPhoneNumbers">
+                <param name="android-package" value="com.dbaq.cordova.contactsPhoneNumbers.ContactsManager"/>
+            </feature>
+        </config-file>
 
-        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+
+        <source-file src="src/android/ContactsManager.java" target-dir="src/com/dbaq/cordova/contactsPhoneNumbers" />
     </platform>
+
+    
 
 	<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
 	<splash platform="android" qualifier="land-xhdpi" src="img/splash-land.png" />
