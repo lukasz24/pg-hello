@@ -72,9 +72,14 @@ function detectMotion() {
 }
 
 function processEvent(event) {
+	/*
     document.getElementById('xPos').innerHTML = 'Acceleration X: ' + event.acceleration.x;
     document.getElementById('yPos').innerHTML = 'Acceleration Y: ' + event.acceleration.y;
     document.getElementById('zPos').innerHTML = 'Acceleration Z: ' + event.acceleration.z;
+*/
+    document.getElementById('xPos').innerHTML =Math.round(event.accelerationIncludingGravity.x);
+	document.getElementById('yPos').innerHTML =Math.round(event.accelerationIncludingGravity.y);
+	document.getElementById('zPos').innerHTML =Math.round(event.accelerationIncludingGravity.z);
 }
 
 function devMove(event){
