@@ -11,10 +11,11 @@
 	</author>
 	<platform name="android">
 		<icon src="img/icon.png" density="xhdpi" />
+		<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
+		<splash platform="android" qualifier="land-xhdpi" src="img/splash-land.png" />
 	</platform>
 	
-	<splash platform="android" qualifier="port-hdpi" src="img/splash.png" />
-	<splash platform="android" qualifier="land-xhdpi" src="img/splash-land.png" />
+	
 		
 	<splash src="splash.png" />
 	<preference name="SplashScreenDelay" value="2000" />
