@@ -77,9 +77,9 @@ function processEvent(event) {
     document.getElementById('yPos').innerHTML = 'Acceleration Y: ' + event.acceleration.y;
     document.getElementById('zPos').innerHTML = 'Acceleration Z: ' + event.acceleration.z;
 */
-    document.getElementById('xPos').innerHTML =Math.round(event.accelerationIncludingGravity.x);
-	document.getElementById('yPos').innerHTML =Math.round(event.accelerationIncludingGravity.y);
-	document.getElementById('zPos').innerHTML =Math.round(event.accelerationIncludingGravity.z);
+    document.getElementById('xPos').innerHTML = "X = " + Math.round(event.accelerationIncludingGravity.x);
+	document.getElementById('yPos').innerHTML = "Y = " + Math.round(event.accelerationIncludingGravity.y);
+	document.getElementById('zPos').innerHTML = "Z = " + Math.round(event.accelerationIncludingGravity.z);
 }
 
 function devMove(event){
